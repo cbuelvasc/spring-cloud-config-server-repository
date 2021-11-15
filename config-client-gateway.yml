@@ -27,9 +27,9 @@ spring:
         - id: subscription-service
           uri: lb://subscription-service
           predicates:
-            - Path=/subscription/**
+            - Path=/subscription-service/**
           filters:
-            - RewritePath=/elastic-query-service/(?<path>.*), /$\{path}
+            - RewritePath=/subscription-service/(?<path>.*), /$\{path}
 
         - id: email-service
           uri: lb://email-service
