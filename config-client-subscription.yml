@@ -21,8 +21,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:9091/auth/realms/subscription
-          jwk-set-uri: http://localhost:9091/auth/realms/subscription/protocol/openid-connect/certs
+          issuer-uri: http://localhost:9080/auth/realms/subscription
+          jwk-set-uri: http://localhost:9080/auth/realms/subscription/protocol/openid-connect/certs
       client:
         registration:
           keycloak:
@@ -31,7 +31,7 @@ spring:
             authorizationGrantType: client_credentials
         provider:
           keycloak:
-            tokenUri: http://localhost:9091/auth/realms/subscription/protocol/openid-connect/token
+            tokenUri: http://localhost:9080/auth/realms/subscription/protocol/openid-connect/token
   jpa:
     open-in-view: false
     show-sql: true
